@@ -44,6 +44,22 @@
         android:orientation="horizontal"
         android:layout_below="@id/space1">
 
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="0dip"
+            android:layout_height="20pt"
+            android:layout_weight="0.2"
+            android:text="@string/inputText"
+            android:textColor="@color/textColor"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:fontFamily="@font/cambria"
+            android:gravity="center"
+            android:background="@color/etBgColor"
+            android:inputType="number"
+            android:hint="@string/hint"/>
+
+
     </LinearLayout>
 
 </RelativeLayout>
