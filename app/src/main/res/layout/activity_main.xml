@@ -125,6 +125,14 @@
             android:text="@string/chkRound"
             android:textSize="8pt" />
 
+        <CheckBox
+            android:id="@+id/chkFormula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chkForm"
+            android:textSize="8pt" />
+
     </LinearLayout>
 
 </RelativeLayout>
