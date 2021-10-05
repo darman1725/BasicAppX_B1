@@ -20,4 +20,15 @@
         android:fontFamily="@font/cambria"
         android:textStyle="bold"/>
 
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:layout_below="@id/myTextView1"
+        android:background="@color/btnColor"
+        android:fontFamily="@font/lucida"
+        android:text="@string/btnText"
+        android:textColor="@color/textColor"
+        android:textSize="11pt"/>
+
 </RelativeLayout>
