@@ -96,6 +96,17 @@
             android:inputType="number"
             android:enabled="false"/>
 
+        <Spinner
+            android:id="@+id/convList"
+            android:layout_width="0dip"
+            android:layout_height="20pt"
+            android:layout_weight="0.24"
+            android:entries="@array/tempList"
+            android:prompt="@string/inputPrompt"
+            android:spinnerMode="dialog"
+            android:gravity="center"/>
+
+
     </LinearLayout>
 
 </RelativeLayout>
