@@ -31,4 +31,10 @@
         android:textColor="@color/textColor"
         android:textSize="11pt"/>
 
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="5pt"
+        android:layout_below="@id/convertButton"/>
+
 </RelativeLayout>
