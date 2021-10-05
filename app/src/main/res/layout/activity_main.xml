@@ -9,4 +9,15 @@
     android:background="@color/viewBgColor"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/myTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:text="@string/tv1Text"
+        android:textColor="@color/textColor"
+        android:textSize="14pt"
+        android:gravity="center"
+        android:fontFamily="@font/cambria"
+        android:textStyle="bold"/>
+
 </RelativeLayout>
