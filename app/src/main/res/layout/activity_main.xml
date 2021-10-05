@@ -69,6 +69,18 @@
             android:spinnerMode="dialog"
             android:gravity="center"/>
 
+        <TextView
+            android:id="@+id/myTextView2"
+            android:layout_width="0dip"
+            android:layout_height="20pt"
+            android:layout_weight="0.12"
+            android:text="@string/tv2Text"
+            android:textColor="@color/textColor"
+            android:textSize="14pt"
+            android:textStyle="bold"
+            android:fontFamily="@font/cambria"
+            android:gravity="center"/>
+
     </LinearLayout>
 
 </RelativeLayout>
