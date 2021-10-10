@@ -23,4 +23,20 @@ public class Distance {
         this.meter = convert("Ft", "Mtr", meter);
     }
 
+    public double getMeter(){
+        return meter;
+    }
+
+    public double getInch(){
+        return convert("Mtr", "Inc", meter);
+    }
+
+    public double getMile(){
+        return convert("Mtr", "Mil", meter);
+    }
+
+    public double getFoot(){
+        return convert("Mtr", "Ft", meter);
+    }
+
 }
