@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_main);
         convertBtn = (Button) findViewById(R.id.convertButton);
         inputTxt = (EditText) findViewById(R.id.inputText);
         outputTxt = (EditText) findViewById(R.id.outputText);
@@ -68,6 +67,88 @@ public class MainActivity extends AppCompatActivity {
         roundBox = (CheckBox) findViewById(R.id.chkRounded);
         formBox = (CheckBox) findViewById(R.id.chkFormula);
         imgView = (ImageView) findViewById(R.id.img);
+
+        unitType.setOnCheckedChangeListener(
+                new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        RadioButton radbut = (RadioButton) findViewById(checkedId);
+                        ArrayAdapter<CharSequence> arr;
+                        inputTxt.setText("0");
+                        outputTxt.setText("0");
+                        switch (radbut.getId()){
+                            case R.id.rbTemp:
+                                arr = ArrayAdapter.createFromResource(unitType.getContext(),
+                                        R.array.tempList, android.R.layout.simple_spinner_item);
+                                imgView.setImageResource(R.drawable.temperature);
+                                arr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                unitOri.setAdapter(arr);
+                                unitConv.setAdapter(arr);
+                                break;
+                            case R.id.rbDist:
+                                arr = ArrayAdapter.createFromResource(unitType.getContext(),
+                                        R.array.distList, android.R.layout.simple_spinner_item);
+                                imgView.setImageResource(R.drawable.distance);
+                                arr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                unitOri.setAdapter(arr);
+                                unitConv.setAdapter(arr);
+                                break;
+                            case R.id.rbWeight:
+                                arr = ArrayAdapter.createFromResource(unitType.getContext(),
+                                        R.array.weightList, android.R.layout.simple_spinner_item);
+                                imgView.setImageResource(R.drawable.weight);
+                                arr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                unitOri.setAdapter(arr);
+                                unitConv.setAdapter(arr);
+                                break;
+                        }
+                    }
+                });
+
+        convertBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                doConvert();
+            }
+        });
+
+        unitOri.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                doConvert();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                return;
+            }
+        });
+
+        unitConv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                doConvert();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                return;
+            }
+        });
+
+        roundBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                doConvert();
+            }
+        });
+
+        formBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ((ImageView) findViewById(R.id.imgFormula)).setVisibility((isChecked) ? View.VISIBLE : View.INVISIBLE);
+            }
+        });
     }
 
     protected void onStart(){
@@ -85,4 +166,10 @@ public class MainActivity extends AppCompatActivity {
         startDialog.show();
     }
 
+    protected void doConvert(){
+        double db = Double.parseDouble(inputTxt.getText().toString());
+        RadioButton rb = (RadioButton) findViewById(unitType.getCheckedRadioButtonId());
+        double inp = convertUnit(rb.getText().toString(), unitOri.getSelectedItem().toString(), unitConv.getSelectedItem().toString(), db);
+        outputTxt.setText(strResult(inp, roundBox.isChecked()));
+    }
 }
