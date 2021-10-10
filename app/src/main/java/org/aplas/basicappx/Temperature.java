@@ -17,6 +17,16 @@ public class Temperature {
         this.celcius = convert("K", "°C", kelvin);
     }
 
-
+    public double getCelcius(){
+        return this.celcius;
+    }
+    public double getFahrenheit() {
+        double celciusToFar = convert("°C", "°F", celcius);
+        return celciusToFar;
+    }
+    public double getKelvins() {
+        double celciusToKelv = convert("°C", "K", celcius);
+        return celciusToKelv;
+    }
 }
 
