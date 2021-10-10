@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgView;
     private AlertDialog startDialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
