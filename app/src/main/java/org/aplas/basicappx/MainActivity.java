@@ -69,4 +69,6 @@ public class MainActivity extends AppCompatActivity {
         formBox = (CheckBox) findViewById(R.id.chkFormula);
         imgView = (ImageView) findViewById(R.id.img);
     }
+
+
 }
