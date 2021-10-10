@@ -70,5 +70,9 @@ public class MainActivity extends AppCompatActivity {
         imgView = (ImageView) findViewById(R.id.img);
     }
 
+    protected void onStart(){
+
+    }
+
 
 }
