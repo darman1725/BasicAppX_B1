@@ -228,6 +228,7 @@
                 android:text="@string/rbDist"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tv22"
                 android:layout_width="wrap_content"
@@ -251,6 +252,42 @@
                 android:background="@drawable/cell_style"
                 android:padding="5dp"
                 android:text="3.2808 feet" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tv31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_style"
+                android:padding="5dp"
+                android:text="@string/rbWeight"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:padding="5dp"
+                android:text="1 Kg" />
+
+            <TextView
+                android:id="@+id/tv33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:padding="5dp"
+                android:text="35.2740 ounce" />
+
+            <TextView
+                android:id="@+id/tv34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:padding="5dp"
+                android:text="2.2046 pound" />
         </TableRow>
 
     </TableLayout>
