@@ -39,4 +39,39 @@ public class Distance {
         return convert("Mtr", "Ft", meter);
     }
 
+    public double convert(String oriUnit, String convUnit, double value){
+        double convert = 0;
+
+        switch (oriUnit){
+            case "Mtr":
+                convert = value;
+                break;
+            case "Inc":
+                convert = value/39.3701;
+                break;
+            case "Mil":
+                convert = value/0.000621371;
+                break;
+            case "Ft":
+                convert = value/3.28084;
+                break;
+        }
+
+        switch (convUnit){
+            case "Mtr":
+                convert = convert;
+                break;
+            case "Inc":
+                convert = convert*39.3701;
+                break;
+            case "Mil":
+                convert = convert*0.000621371;
+                break;
+            case "Ft":
+                convert = convert*3.28084;
+                break;
+        }
+        return convert;
+    }
+
 }
