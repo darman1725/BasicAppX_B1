@@ -58,5 +58,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        convertBtn = (Button) findViewById(R.id.convertButton);
+        inputTxt = (EditText) findViewById(R.id.inputText);
+        outputTxt = (EditText) findViewById(R.id.outputText);
+        unitOri = (Spinner) findViewById(R.id.oriList);
+        unitConv = (Spinner) findViewById(R.id.convList);
+        unitType = (RadioGroup) findViewById(R.id.radioGroup);
+        roundBox = (CheckBox) findViewById(R.id.chkRounded);
+        formBox = (CheckBox) findViewById(R.id.chkFormula);
+        imgView = (ImageView) findViewById(R.id.img);
     }
 }
