@@ -19,5 +19,19 @@ public class Weight {
         this.gram = convert("Pnd", "Grm", gram);
     }
 
+    public double getGram(){
+        return gram;
+    }
+
+    public double getOunce(){
+        return convert("Grm", "Onc", gram);
+    }
+
+    public double getPound(){
+        return convert("Grm", "Pnd", gram);
+    }
+
+
+
 
 }
