@@ -24,12 +24,12 @@
         android:id="@+id/convertButton"
         android:layout_width="match_parent"
         android:layout_height="20pt"
-        android:layout_below="@id/myTextView1"
-        android:backgroundTint="@color/btnColor"
-        android:fontFamily="@font/lucida"
         android:text="@string/btnText"
         android:textColor="@color/textColor"
-        android:textSize="11pt"/>
+        android:textSize="11pt"
+        android:backgroundTint="@color/btnColor"
+        android:fontFamily="@font/lucida"
+        android:layout_below="@id/myTextView1" />
 
     <Space
         android:id="@+id/space1"
@@ -112,26 +112,26 @@
         android:id="@+id/child2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_below="@id/child1"
-        android:layout_marginTop="5pt"
-        android:orientation="horizontal">
+        android:layout_marginTop="5pt">
 
         <CheckBox
             android:id="@+id/chkRounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:gravity="center"
             android:text="@string/chkRound"
-            android:textSize="8pt" />
+            android:textSize="8pt"
+            android:gravity="center"
+            android:checked="true" />
 
         <CheckBox
             android:id="@+id/chkFormula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="@string/chkForm"
-            android:textSize="8pt" />
+            android:textSize="8pt"
+            android:gravity="center"/>
 
     </LinearLayout>
 
