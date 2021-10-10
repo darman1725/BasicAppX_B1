@@ -182,6 +182,42 @@
         android:layout_marginTop="5pt"
         android:stretchColumns="*" >
 
+        <TableRow>
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_style"
+                android:padding="5dp"
+                android:text="@string/rbTemp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:padding="5dp"
+                android:text="0°C" />
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:padding="5dp"
+                android:text="32°F" />
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_style"
+                android:padding="5dp"
+                android:text="273.15 K" />
+        </TableRow>
+
     </TableLayout>
 
 </RelativeLayout>
