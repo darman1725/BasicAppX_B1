@@ -28,5 +28,34 @@ public class Temperature {
         double celciusToKelv = convert("°C", "K", celcius);
         return celciusToKelv;
     }
+
+    public double convert(String oriUnit, String convUnit, double value){
+        double convert = 0;
+
+        switch (oriUnit){
+            case "°C":
+                convert = value;
+                break;
+            case "°F"  :
+                convert = (value-32)*5/9;
+                break;
+            case "K" :
+                convert = value-273.15;
+                break;
+        }
+
+        switch (convUnit){
+            case "°C":
+                convert = convert;
+                break;
+            case "°F"  :
+                convert = convert*9/5+32;
+                break;
+            case "K" :
+                convert = convert + 273.15;
+                break;
+        }
+        return convert;
+    }
 }
 
