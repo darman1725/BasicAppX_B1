@@ -144,7 +144,12 @@
         android:orientation="horizontal"
         android:layout_below="@id/child2">
 
-
+        <RadioButton
+            android:id="@+id/rbTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbTemp"
+            android:checked="true"/>
 
     </RadioGroup>
 
