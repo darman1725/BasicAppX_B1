@@ -71,7 +71,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onStart(){
+        super.onStart();
 
+        startDialog = new AlertDialog.Builder(MainActivity.this).create();
+        startDialog.setTitle("Application started");
+        startDialog.setMessage("This app can use to convert any units");
+        startDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
     }
 
 
